@@ -239,6 +239,7 @@
 				B8DD80A11CD7333200B38E58 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
