@@ -139,11 +139,11 @@ char mapOperationToChar(int op_index){
             op_name = '-';
             break;
         }
-        case 3:{
+        case 2:{
             op_name = '*';
             break;
         }
-        case 4:{
+        case 3:{
             op_name = '/';
             break;
         }
@@ -157,7 +157,8 @@ char mapOperationToChar(int op_index){
 }
 
 void printAnswer(int card_index, int op_index){
-    printf("%d%c%d%c%d%c%d = 24\n", (int ) per[card_index], mapOperationToChar(op_index), (int ) per[card_index], mapOperationToChar(op_index), (int ) per[card_index],mapOperationToChar(op_index),  (int ) per[card_index]);
+    
+    printf("%d%c%d%c%d%c%d = 24\n", (int ) per[card_index], mapOperationToChar(op_order[op_index]), (int ) per[card_index+1], mapOperationToChar(op_order[op_index+1]), (int ) per[card_index+2],mapOperationToChar(op_order[op_index+2]),  (int ) per[card_index+3]);
     
     }
 
@@ -169,7 +170,7 @@ int main(int argc, const char * argv[]) {
     PTRFUNC operations[] = {add, minus, multiply, divide};
     
     printf("Hello, World!\n");
-    float cards[4] = {1,2,3,4};
+    float cards[4] = {1,1,1,1};
     
     //generateCard(cards, 0);
     printf("The Input Cards are: \n");
@@ -193,6 +194,10 @@ int main(int argc, const char * argv[]) {
             }
             
             
+            
+        }
+        if (solutionFoundFlag == 1) {
+            break;
         }
     }
     if (solutionFoundFlag==0) {
